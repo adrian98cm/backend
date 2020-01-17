@@ -1,0 +1,40 @@
+type Query {
+    test: String
+    getEntradasAutor(email:String!,token:ID!):[Entrada!]
+    getEntradas(email:String!,token:ID!):[Entrada!]
+    getEntradaEspecifica(titulo:String!,email:String!,token:ID!):[Entrada!]
+
+
+}
+
+type Mutation {
+    addUser(email:String!, password:String!, autor:Int!):User
+    login(email:String!, password:String!):ID
+    logout(email:String!,token:ID!):ID
+    removeUser(email:String!, token:ID!):User
+
+    addEntrada(titulo:String!, descripcion:String!, email: String!, token: ID!):Entrada
+    deleteEntrada(titulo: String!, email: String!, token: ID!):Entrada
+
+}
+
+type User{
+    _id: ID!
+    email: String!
+    password: String!
+    token: ID
+    autor: Int!
+    entradas: [Entrada!]
+
+}
+
+type Entrada{
+    _id: ID!
+    titulo: String!
+    descripcion: String!
+    autor: User!
+}
+
+type Subscription{
+    authorSubscribe(id:ID!):Entrada!
+}
