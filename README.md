@@ -1,4 +1,4 @@
-# Examen Parcial
+# Examen Final
 
 ## Getting Started
 
