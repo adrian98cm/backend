@@ -14,7 +14,7 @@ const Query = {
 
     getEntradas: async (parent, args, ctx, info) => {
         const { client, pubsub } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 
@@ -33,7 +33,7 @@ const Query = {
 
     getEntradasAutor: async (parent, args, ctx, info) => {
         const { client, pubsub } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 
@@ -52,7 +52,7 @@ const Query = {
 
     getEntradaEspecifica: async (parent, args, ctx, info) => {
         const { client, pubsub } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 

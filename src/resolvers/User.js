@@ -7,7 +7,7 @@ const User = {
     entradas: async (parent, args, ctx, info) => {
         const { client } = ctx
 
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const collection = db.collection('entradas');
        
         const entradas = await collection.find({autor: ObjectID(parent._id)}).toArray();

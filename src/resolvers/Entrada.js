@@ -7,7 +7,7 @@ const Entrada = {
     autor: async (parent, args, ctx, info) => {
         const { client } = ctx;
 
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const collection = db.collection('users')
     
         const autor = await collection.findOne({_id: parent.autor});
@@ -17,3 +17,4 @@ const Entrada = {
 }
 
 export { Entrada as default }
+

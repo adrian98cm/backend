@@ -8,7 +8,7 @@ const Mutation = {
 
     addUser: async (parent, args, ctx, info) => {
         const { client } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const collection = db.collection('users');
 
         const { email, password, autor } = args;
@@ -25,7 +25,7 @@ const Mutation = {
 
     login: async (parent, args, ctx, info) => {
         const { client } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const collection = db.collection('users');
 
         const { email, password } = args;
@@ -49,7 +49,7 @@ const Mutation = {
 
     logout: async (parent, args, ctx, info) => {
         const { client } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const collection = db.collection('users');
 
         const { email, token } = args;
@@ -61,7 +61,7 @@ const Mutation = {
 
     addEntrada: async (parent, args, ctx, info) => {
         const { client, pubsub } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 
@@ -108,7 +108,7 @@ const Mutation = {
 
     removeUser: async (parent, args, ctx, info) => {
         const { client } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 
@@ -127,7 +127,7 @@ const Mutation = {
 
     deleteEntrada: async (parent, args, ctx, info) => {
         const { client } = ctx
-        const db = client.db("examenFinal");
+        const db = client.db("gimnasio");
         const usersCollection = db.collection('users');
         const entradasCollection = db.collection('entradas');
 
