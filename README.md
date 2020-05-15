@@ -1,4 +1,4 @@
-# Examen Final
+# Backen trabajo final
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ npm install
 ### Run 
 
 ```
-npm run dev 
+npm start
 ```
 
 ```
